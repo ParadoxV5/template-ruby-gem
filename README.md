@@ -83,7 +83,7 @@ records the default command-line parameters, so you only need to execute `yard d
 ###### [`.gitignore`](.gitignore)
 [The `.gitignore` file](https://git-scm.com/docs/gitignore) lists file patterns to exclude from Git’s records.
 
-* Including `Gemfile.lock` with the repo guarantees others’ checkouts use your identical functioning dependency versions;
+* Including `Gemfile.lock`/`rbs_collection.lock.yaml` with the repo guarantees others’ checkouts use your identical functioning dependency versions;
   omitting it encourages using dependencies’ latest versions at the risk of incompatible updates.
 * Don’t include IDE (e.g., [RubyMine](https://www.jetbrains.com/ruby/)) configurations
   unless you want to enforce your organization’s digital environment.
