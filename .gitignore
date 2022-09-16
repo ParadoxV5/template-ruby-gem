@@ -2,4 +2,5 @@
 /.idea/
 
 # Ruby
-Gemfile.lock
+/.gem_rbs_collection/
+/Gemfile.lock
