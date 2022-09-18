@@ -9,3 +9,7 @@ sources:
 gems:
   - name: rbs
     ignore: true
+  - name: yard
+    ignore: true
+  - name: commonmarker
+    ignore: true
