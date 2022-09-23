@@ -1,7 +1,7 @@
 version: 2
 #
 #registries:
-#  github-rubygems:
+#  github:
 #    type: rubygems-server
 #    url: https://rubygems.pkg.github.com/ParadoxV5
 #    token: ${{ secrets.GITHUB_TOKEN }}
@@ -9,7 +9,7 @@ version: 2
 updates:
 
 - package-ecosystem: bundler
-  #registries: [github-rubygems]
+  #registries: [github]
   #insecure-external-code-execution: allow
   directory: /
   ignore:
