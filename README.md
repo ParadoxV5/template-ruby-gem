@@ -1,7 +1,7 @@
 # `template-ruby-gem`
 
 Built upon [`ParadoxV5/mygem`](https://github.com/ParadoxV5/mygem),
-this is a basic yet thorough template for a Ruby Gem project.
+this is a mediocre yet thorough template for a Ruby Gem project.
 Note: only `gem`, no `rake`.
 
 
