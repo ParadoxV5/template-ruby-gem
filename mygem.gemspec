@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   
   spec.author = 'ParadoxV5'
   spec.license = ''
-
+  
   github = 'https://github.com/ParadoxV5/mygem'
   spec.metadata['source_code_uri'] = github
   spec.metadata['changelog_uri'] = "#{github}/commits"

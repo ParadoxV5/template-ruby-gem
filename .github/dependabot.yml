@@ -8,6 +8,14 @@ version: 2
 #
 updates:
 
+- package-ecosystem: github-actions
+  directory: /
+  ignore:
+  - update-types: [version-update:semver-minor, version-update:semver-patch]
+    dependency-name: '*'
+  schedule:
+    interval: monthly
+
 - package-ecosystem: bundler
   #registries: [github]
   #insecure-external-code-execution: allow
