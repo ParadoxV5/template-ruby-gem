@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   
   spec.author = 'AUTHOR'
   spec.license = ''
-
+  
   github = 'https://github.com/AUTHOR/mygem'
   spec.metadata['source_code_uri'] = github
   spec.metadata['changelog_uri'] = "#{github}/commits"
