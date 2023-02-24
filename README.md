@@ -13,7 +13,6 @@ Note: only `gem`, no `rake`.
   * [`lib/mygem.rb` and Line 1](lib/mygem.rb#L1)
   * [`sig/mygem.rbs` and Line 1](sig/mygem.rbs#L1)
   * [`mygem.gemspec` and Lines 2, 5, 7, 13 & 19](mygem.gemspec#L2-L19)
-  * [`.github/workflows/packages.yml` Line 22](.github/workflows/packages.yml#L24)
 * Replace all occurrences of `AUTHOR` with the name of you, the author of your Gem.
   * [`mygem.gemspec` and Lines 10, 13 & 19](mygem.gemspec#L10-L19)
   * [`.github/workflows/packages.yml` Line 22](.github/workflows/packages.yml#L24)
