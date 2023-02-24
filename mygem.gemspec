@@ -22,9 +22,4 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   
   #spec.add_dependency 'dependent_gem', '~> 2.1.0'
-  
-  spec.add_development_dependency 'rbs', '~> 2.8.0'
-  spec.add_development_dependency 'steep', '~> 1.3.0'
-  spec.add_development_dependency 'yard', '~> 0.9.0'
-  spec.add_development_dependency 'commonmarker', '~> 0.23.0'
 end
