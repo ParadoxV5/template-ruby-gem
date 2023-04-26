@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
-gemspec
-#
 #source 'https://rubygems.pkg.github.com/ParadoxV5' do
 #end
+gemspec
 
 # Development Apps
 gem 'rbs', '~> 3.0.0', require: false
