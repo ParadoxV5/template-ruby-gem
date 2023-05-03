@@ -13,6 +13,8 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2'
+      env:
+        BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
     
     - name: Package Gem
       run: gem build --output .gem *.gemspec
