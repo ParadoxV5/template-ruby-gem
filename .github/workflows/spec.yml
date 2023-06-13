@@ -1,14 +1,16 @@
-name: Test with RSpec
+name: Check Specs with RSpec
 on:
   push:
-    branches: [main]
-    paths: [lib/**, spec/**]
+    paths: [.github/workflows/spec.yml, lib/**, spec/**]
   pull_request:
-    branches: [main]
-    paths: [lib/**, spec/**]
+    paths: [.github/workflows/spec.yml, lib/**, spec/**]
 jobs:
   
-  test:
+  spec:
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby-version: ['3', '3.0', '2', '2.0']
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -19,10 +21,10 @@ jobs:
 
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2'
+        ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
       env:
         BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
     
-    - name: Test with RSpec
+    - name: Check Specs with RSpec
       run: bundle exec rspec
