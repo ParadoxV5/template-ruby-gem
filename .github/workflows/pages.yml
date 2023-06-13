@@ -1,8 +1,8 @@
-name: GitHub Pages
+name: GitHub Pages with YARD
 on:
   push: 
     branches: [main]
-    paths: [lib/**]
+    paths: [.github/workflows/pages.yml, lib/**]
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -21,7 +21,7 @@ jobs:
     
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2'
+        ruby-version: '3'
         bundler-cache: true
       env:
         BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}

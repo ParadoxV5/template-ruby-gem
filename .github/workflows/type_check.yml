@@ -1,11 +1,9 @@
 name: Check Types with Steep
 on:
   push:
-    branches: [main]
-    paths: [lib/**, sig/**]
+    paths: [.github/workflows/type_check.yml, lib/**, sig/**]
   pull_request:
-    branches: [main]
-    paths: [lib/**, sig/**]
+    paths: [.github/workflows/type_check.yml, lib/**, sig/**]
 jobs:
   
   type_check:
@@ -19,7 +17,7 @@ jobs:
 
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2'
+        ruby-version: '3'
         bundler-cache: true
       env:
         BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
