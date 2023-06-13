@@ -1,6 +1,6 @@
 name: GitHub Pages with YARD
 on:
-  push: 
+  push:
     branches: [main]
     paths: [.github/workflows/pages.yml, lib/**]
 concurrency:
