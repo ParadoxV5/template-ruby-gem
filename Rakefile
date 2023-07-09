@@ -1,4 +1,4 @@
-require "minitest/test_task"
+require 'minitest/test_task'
 # Create the following tasks:
 # * test          : run tests
 # * test:cmd      : print the testing command

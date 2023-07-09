@@ -1,12 +1,12 @@
-name: Check Specs with RSpec
+name: Test with Minitest
 on:
   push:
-    paths: [.github/workflows/spec.yml, lib/**, spec/**]
+    paths: [.github/workflows/test.yml, lib/**, test/**]
   pull_request:
-    paths: [.github/workflows/spec.yml, lib/**, spec/**]
+    paths: [.github/workflows/test.yml, lib/**, test/**]
 jobs:
   
-  spec:
+  test:
     strategy:
       fail-fast: false
       matrix:
@@ -27,5 +27,5 @@ jobs:
       env:
         BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
     
-    - name: Check Specs with RSpec
-      run: bundle exec rspec
+    - name: Test with Minitest
+      run: rake test:isolated
