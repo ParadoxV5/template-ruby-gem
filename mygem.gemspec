@@ -5,21 +5,24 @@ Gem::Specification.new do |spec|
   spec.name = 'mygem'
   spec.summary = ''
   spec.version = MyGem::VERSION
-  spec.required_ruby_version = '>= 2'
-  
   spec.author = 'AUTHOR'
   spec.license = ''
   
-  github = 'https://github.com/AUTHOR/mygem'
-  spec.metadata['source_code_uri'] = github
-  spec.metadata['changelog_uri'] = "#{github}/commits"
-  spec.metadata['bug_tracker_uri'] = "#{github}/issues"
-  spec.metadata['documentation_uri'] =
-    spec.metadata['homepage_uri'] =
-    spec.homepage = 'https://AUTHOR.github.io/mygem/'
-  
+  github_account = spec.author
+  github = File.join 'https://github.com', github_account, spec.name
+  spec.homepage = github
+  spec.metadata = {
+    "homepage_uri"      => spec.homepage,
+    "source_code_uri"   => github,
+    "changelog_uri"     => File.join(github, 'commits'),
+    "bug_tracker_uri"   => File.join(github, 'issues'),
+    "wiki_uri"          => File.join(github, 'wiki'),
+    "funding_uri"       => File.join('https://github.com/sponsors', github_account),
+    "documentation_uri" => File.join('https://rubydoc.info/gems', spec.name)
+  }
+
   spec.files = Dir['**/*']
-  spec.require_paths = ['lib']
   
+  spec.required_ruby_version = '>= 2'
   #spec.add_dependency 'dependent_gem', '~> 2.1.0'
 end
