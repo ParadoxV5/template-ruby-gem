@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir['**/*']
   
-  spec.required_ruby_version = '>= 2'
+  spec.required_ruby_version = '>= 3'
   #spec.add_dependency 'dependent_gem', '~> 2.1.0'
 end
