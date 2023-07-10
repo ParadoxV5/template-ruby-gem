@@ -28,4 +28,4 @@ jobs:
         BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
     
     - name: Test with Minitest
-      run: rake test:isolated
+      run: bundle exec rake test:isolated

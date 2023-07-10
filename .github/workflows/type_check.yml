@@ -26,4 +26,4 @@ jobs:
       run: bundle exec rbs collection install
     
     - name: Check Types with Steep
-      run: steep check
+      run: bundle exec steep check
