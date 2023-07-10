@@ -1,4 +1,4 @@
-name: GitHub Packages with Gem
+name: Package with RubyGems
 on: {release: {types: [published]}}
 jobs:
   package:
@@ -13,12 +13,11 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3'
-      env:
-        BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
     
     - name: Package Gem
       run: gem build --output .gem *.gemspec
     
-    - name: Publish to GitHub Packages
-      run: gem push --host https://rubygems.pkg.github.com/ParadoxV5 .gem
-      env: {GEM_HOST_API_KEY: "Bearer ${{ github.token }}"}
+    - name: Publish to RubyGems
+      run: gem push .gem
+      env: 
+        GEM_HOST_API_KEY: ${{ secrets.GEM_HOST_API_KEY }}

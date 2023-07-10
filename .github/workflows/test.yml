@@ -1,18 +1,18 @@
-name: Check Specs with RSpec
+name: Test with Minitest
 on:
   push:
-    paths: [.github/workflows/spec.yml, lib/**, spec/**]
+    paths: [.github/workflows/test.yml, lib/**, test/**, '*.gemspec']
   pull_request:
-    paths: [.github/workflows/spec.yml, lib/**, spec/**]
+    paths: [.github/workflows/test.yml, lib/**, test/**, '*.gemspec']
 jobs:
   
-  spec:
+  test:
     strategy:
       fail-fast: false
       matrix:
-        ruby-version: ['3', '3.0', '2', '2.0']
-    name: 'Ruby ${{ matrix.ruby-version }}'
-    runs-on: ubuntu-latest
+        os: [ubuntu-latest, windows-latest]
+        ruby-version: ['3', '3.0']
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 5
     steps:
     
@@ -27,5 +27,5 @@ jobs:
       env:
         BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
     
-    - name: Check Specs with RSpec
-      run: bundle exec rspec
+    - name: Test with Minitest
+      run: bundle exec rake test:isolated
