@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.metadata = {
     "homepage_uri"      => spec.homepage,
     "source_code_uri"   => github,
-    "changelog_uri"     => File.join(github, 'commits'),
+    "changelog_uri"     => File.join(github, 'releases'),
     "bug_tracker_uri"   => File.join(github, 'issues'),
     "wiki_uri"          => File.join(github, 'wiki'),
     "funding_uri"       => File.join('https://github.com/sponsors', github_account),
