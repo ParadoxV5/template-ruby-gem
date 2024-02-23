@@ -1,9 +1,14 @@
 name: Test with Minitest
 on:
   push:
-    paths: [.github/workflows/test.yml, lib/**, test/**, Gemfile, '*.gemspec']
+    paths: &paths
+    - .github/workflows/test.yml
+    - lib/**
+    - test/**
+    - Gemfile
+    - '*.gemspec'
   pull_request:
-    paths: [.github/workflows/test.yml, lib/**, test/**, Gemfile, '*.gemspec']
+    paths: *paths
 jobs:
   
   test:
