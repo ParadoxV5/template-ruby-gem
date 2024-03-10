@@ -3,6 +3,7 @@ on:
   push:
     paths: &paths
     - .github/workflows/test.yml
+    - ext/**
     - lib/**
     - test/**
     - Gemfile
@@ -30,5 +31,7 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
     
+    - name: Build with Rake
+      run: bundle exec rake
     - name: Test with Minitest
       run: bundle exec rake test:isolated
