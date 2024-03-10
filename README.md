@@ -13,7 +13,7 @@ Note: just `gem`. The `rake` is for test-building and invoking minitest (See [§
   * [`ext/mygem/extconf.rb` Line 6](ext/mygem/extconf.rb#L6)
   * [`lib/mygem/`](lib/mygem/)
   * [`lib/mygem.rb` and Line 1 & 2](lib/mygem.rb#L1-2)
-  * [`lib/mygem/version.rb Line 3`](lib/mygem/version.rb#L3)
+  * [`lib/mygem/version.rb` Line 3](lib/mygem/version.rb#L3)
   * [`sig/mygem.rbs` and Line 1](sig/mygem.rbs#L1)
   * [`test/mygem_test.rb` and Lines 3 & 4](test/mygem_test.rb#L3-4)
   * [`mygem.gemspec` and Lines 2, 5 & 7](mygem.gemspec#L2-L7)
@@ -63,7 +63,7 @@ though you can remove any bells and whistles that don’t apply to your project.
 
 [The `Gemfile`](https://bundler.io/guides/gemfile.html) is the **Bundler** project file where
 you *would* declare dependencies **if only using Bundler** (i.e., not cutting a Gem).
-For Gems, the [`gemspec`](#gemspec) already covers this role in its metadata.
+For Gems, the [`gemspec`](#gemspec) already covers this role in its metadata – *mostly*.
 
 > There was a discussion before about whether the `Gemfile` makes `.gemspec`’s
 > [`add_development_dependency`](https://guides.rubygems.org/specification-reference/#add_development_dependency)
