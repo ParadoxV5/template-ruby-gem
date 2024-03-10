@@ -1,7 +1,7 @@
 name: Test with Minitest
 on:
   push:
-    paths: &paths
+    paths:
     - .github/workflows/test.yml
     - ext/**
     - lib/**
@@ -9,7 +9,13 @@ on:
     - Gemfile
     - '*.gemspec'
   pull_request:
-    paths: *paths
+    paths:
+    - .github/workflows/test.yml
+    - ext/**
+    - lib/**
+    - test/**
+    - Gemfile
+    - '*.gemspec'
 jobs:
   
   test:
