@@ -1,13 +1,13 @@
 # VSCode
-/.vscode/
+.vscode/
 # Visual Studio
-/.vs/
+.vs/
 # JetBrains
-/.idea/
+.idea/
 
 # Ruby
-/tmp/
-/Gemfile.lock
+tmp/
+Gemfile.lock
 # https://github.com/ruby/gem_rbs_collection
-/.gem_rbs_collection/
-/rbs_collection.lock.yaml
+.gem_rbs_collection/
+rbs_collection.lock.yaml
