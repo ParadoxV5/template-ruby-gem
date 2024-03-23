@@ -10,7 +10,7 @@ group :development do
   end
   group :documentation do
     gem 'yard', '~> 0.9.0', require: false
-    gem 'commonmarker', '~> 0.23.10', require: false
+    gem 'commonmarker', '~> 1.0.4', require: false
   end
   group :test do
     gem 'rake', '~> 13.1.0'
