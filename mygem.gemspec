@@ -18,9 +18,13 @@ Gem::Specification.new do|spec|
     'funding_uri'       => "https://github.com/sponsors/#{github_account}",
     'documentation_uri' => "https://rubydoc.info/gems/#{spec.name}"
   }
-
-  spec.files = Dir['**/*']
+  
+  spec.files = Dir['**/*'].grep_v Regexp.union *%w[
+    test/
+    rbs_collection.yaml
+    Steepfile
+  ]
   
   spec.required_ruby_version = '~> 3.1'
-  #spec.add_dependency 'dependent_gem', '~> 2.1.0'
+  #spec.add_dependency 'dependency_gem', '~> 2.1.0'
 end
