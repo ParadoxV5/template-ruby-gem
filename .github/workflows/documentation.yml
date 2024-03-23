@@ -1,7 +1,6 @@
 name: Generate Documentation with YARD
 on:
   push:
-    branches: [main]
     paths:
     - .github/workflows/documentation.yml
     - .yardopts
@@ -9,22 +8,23 @@ on:
     - lib/**
     - README.md
     - Gemfile
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  pull_request:
+    paths:
+    - .github/workflows/documentation.yml
+    - .yardopts
+    - docs/**
+    - lib/**
+    - README.md
+    - Gemfile
 jobs:
   
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
     steps:
     
     - uses: actions/checkout@v4
       with:
         submodules: recursive
-    
-    - uses: actions/configure-pages@v4
     
     - uses: ruby/setup-ruby@v1
       with:
@@ -40,11 +40,18 @@ jobs:
   
   deploy:
     needs: build
+    if: github.ref_name == 'main'
     environment:
       name: github-pages
       url: ${{ steps.deploy-pages.outputs.page_url }}
-    permissions: write-all
+    concurrency:
+      group: pages
+      cancel-in-progress: true
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
+    
+    - uses: actions/configure-pages@v4
+    
     - id: deploy-pages
       uses: actions/deploy-pages@v4
