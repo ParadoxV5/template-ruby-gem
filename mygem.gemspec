@@ -24,6 +24,7 @@ Gem::Specification.new do|spec|
     rbs_collection.yaml
     Steepfile
   ]
+  spec.extensions = %w[ext/mygem/extconf.rb]
   
   spec.required_ruby_version = '~> 3.1'
   #spec.add_dependency 'dependency_gem', '~> 2.1.0'

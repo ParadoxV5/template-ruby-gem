@@ -16,7 +16,7 @@ Note: just `gem`. The `rake` is for test-building and invoking minitest (See [§
   * [`lib/mygem/version.rb` Line 3](lib/mygem/version.rb#L3)
   * [`sig/mygem.rbs` and Line 1](sig/mygem.rbs#L1)
   * [`test/mygem_test.rb` and Lines 3 & 4](test/mygem_test.rb#L3-4)
-  * [`mygem.gemspec` and Lines 2, 5 & 7](mygem.gemspec#L2-L7)
+  * [`mygem.gemspec` and Lines 2, 5, 7 & 27](mygem.gemspec#L2-L27)
   * [`Rakefile` Lines 12 & 15](Rakefile#L12-L15)
 * Update the [`gemspec`](mygem.gemspec) with your Gem’s information. (See [§`*.gemspec`](#gemspec))
 * Overwrite this `README` with an introduction to your epic project.
