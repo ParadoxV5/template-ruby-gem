@@ -51,7 +51,7 @@ jobs:
     permissions: write-all
     steps:
     
-    - uses: actions/configure-pages@v4
+    - uses: actions/configure-pages@v5
     
     - id: deploy-pages
       uses: actions/deploy-pages@v4
