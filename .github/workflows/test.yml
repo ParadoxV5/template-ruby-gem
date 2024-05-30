@@ -32,6 +32,7 @@ jobs:
     
     - uses: ruby/setup-ruby@v1
       with:
+        windows-toolchain: 'none' # remove this line if the project requires MSYS2 DevKit
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
     
