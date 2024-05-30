@@ -34,7 +34,6 @@ jobs:
       with:
         windows-toolchain: 'none' # remove this line if the project requires MSYS2 DevKit
         ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true
     
     - name: Test with Minitest
       run: bundle exec rake test:isolated
