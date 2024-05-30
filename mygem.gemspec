@@ -21,6 +21,7 @@ Gem::Specification.new do|spec|
   
   spec.files = Dir['**/*'].grep_v Regexp.union *%w[
     test/
+    Gemfile
     rbs_collection.yaml
     Steepfile
   ]
