@@ -13,7 +13,7 @@ group :development do
     gem 'commonmarker', '~> 2.0.1', require: false
   end
   group :test do
-    gem 'rake', '~> 13.2.1'
+    gem 'rake', '~> 13.3.0'
     gem 'minitest', '~> 5.25.1'
   end
 end
