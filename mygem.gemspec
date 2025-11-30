@@ -12,6 +12,7 @@ Gem::Specification.new do|spec|
   github = "https://github.com/#{github_account}/#{spec.name}"
   spec.metadata = {
     'homepage_uri'      => spec.homepage = github,
+    'github_repo'       => github,
     'changelog_uri'     => File.join(github, 'releases'),
     'bug_tracker_uri'   => File.join(github, 'issues'),
     'wiki_uri'          => File.join(github, 'wiki'),
@@ -26,6 +27,6 @@ Gem::Specification.new do|spec|
     Steepfile
   ]
   
-  spec.required_ruby_version = '~> 3.1'
+  spec.required_ruby_version = ['> 3.4', '< 4.1'] # Ruby 4.0 coming soon!
   #spec.add_dependency 'dependency_gem', '~> 2.1.0'
 end

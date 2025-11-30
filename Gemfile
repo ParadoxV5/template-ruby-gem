@@ -1,16 +1,21 @@
 # frozen_string_literal: true
-source 'https://rubygems.org'
+
+#source 'https://rubygems.org'
+source 'https://gem.coop'
+#source 'https://rubygems.pkg.github.com/AUTHOR'
 gemspec
 
 # Development Apps
 group :development do
   group :type_check do
-    gem 'rbs', '~> 3.6.1', require: false
-    gem 'steep', '~> 1.8.1', require: false
+    gem 'rbs', '~> 3.9.5', require: false
+    gem 'steep', '~> 1.10.0', require: false
   end
   group :documentation do
-    gem 'yard', github: 'ParadoxV5/yard', tag: 'commonmarker-1.0_1', require: false
-    gem 'commonmarker', '~> 2.0.1', require: false
+    gem 'yard', require: false,
+      # For Commonmarker 1+ (lsegal/yard#1528)
+      github: 'gjtorikian/yard', branch: 'commonmarker-onetwo-oh'
+    gem 'commonmarker', '~> 2.5.0', require: false
   end
   group :test do
     gem 'rake', '~> 13.3.0'
