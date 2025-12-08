@@ -15,7 +15,7 @@ group :development do
     gem 'yard', require: false,
       # For Commonmarker 1+ (lsegal/yard#1528)
       github: 'gjtorikian/yard', branch: 'commonmarker-onetwo-oh'
-    gem 'commonmarker', '~> 2.5.0', require: false
+    gem 'commonmarker', '~> 2.6.0', require: false
   end
   group :test do
     gem 'rake', '~> 13.3.0'
