@@ -13,11 +13,11 @@ Note: just `gem`. The `rake` is for test-building and invoking minitest (See [§
   * [`ext/mygem/extconf.rb` Line 6](ext/mygem/extconf.rb#L6)
   * [`lib/mygem/`](lib/mygem/)
   * [`lib/mygem.rb` and Line 1 & 2](lib/mygem.rb#L1-2)
-  * [`lib/mygem/version.rb` Line 3](lib/mygem/version.rb#L3)
+  * [`lib/mygem/version.rb` Line 1](lib/mygem/version.rb#L1)
   * [`sig/mygem.rbs` and Line 1](sig/mygem.rbs#L1)
-  * [`test/mygem_test.rb` and Lines 3 & 4](test/mygem_test.rb#L3-4)
-  * [`mygem.gemspec` and Lines 2, 5, 7 & 27](mygem.gemspec#L2-L27)
-  * [`Rakefile` Lines 12 & 15](Rakefile#L12-L15)
+  * [`test/mygem_test.rb` and Lines 2 & 3](test/mygem_test.rb#L2-3)
+  * [`mygem.gemspec` and Lines 1, 4 & 6](mygem.gemspec#L1-L6)
+  * [`Rakefile` Lines 11 & 14](Rakefile#L11-L14)
 * Update the [`gemspec`](mygem.gemspec) with your Gem’s information. (See [§`*.gemspec`](#gemspec))
 * Overwrite this `README` with an introduction to your epic project.
 * Replace *this template’s* [`LICENSE.txt`](LICENSE.txt) with
@@ -47,7 +47,7 @@ This is the folder where people put their Ruby sources, starting with their
 ### [`sig/**`](sig/)
 
 Have you heard of [RBS](https://github.com/ruby/rbs)?
-Yep, Ruby 3 introduced this official type checking system.
+Yep, Ruby 3 introduced this official type checking system. (And we are at Ruby 4 now!)
 The convention is to put your RBS signatures in this folder.
 
 

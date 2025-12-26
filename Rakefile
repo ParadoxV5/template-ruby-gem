@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 require 'minitest/test_task'
 require 'rake/extensiontask'
 #begin
@@ -23,8 +22,7 @@ task default: :compile
 # * test:deps     : (alias of test:isolated)
 # * test:slow     : run tests and reports the slowest 25
 Minitest::TestTask.create do |t|
-  t.extra_args << '-Werror' # Raise exceptions for warnings: https://github.com/minitest/minitest/commit/f0f17b9
-  if RUBY_VERSION > '3.3'
-    t.test_prelude = 'Warning[:performance] = true' # … including `performance` warnings which are off even with `-w`
-  end
+  t.extra_args << '-Werror' # Raise exceptions for warnings …
+  # … for all categories, even those that are off even with `-w`
+  t.test_prelude = 'Warning.categories.each { Warning[it] = true }'
 end

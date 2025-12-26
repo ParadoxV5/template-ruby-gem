@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 require_relative 'lib/mygem/version'
 
 Gem::Specification.new do|spec|
@@ -12,6 +11,7 @@ Gem::Specification.new do|spec|
   github = "https://github.com/#{github_account}/#{spec.name}"
   spec.metadata = {
     'homepage_uri'      => spec.homepage = github,
+    'github_repo'       => github,
     'changelog_uri'     => File.join(github, 'releases'),
     'bug_tracker_uri'   => File.join(github, 'issues'),
     'wiki_uri'          => File.join(github, 'wiki'),
@@ -21,12 +21,13 @@ Gem::Specification.new do|spec|
   
   spec.files = Dir['**/*'].grep_v Regexp.union *%w[
     test/
+    Gemfile
     rbs_collection.yaml
     Steepfile
   ]
   spec.extensions = %w[ext/mygem/extconf.rb]
   
-  spec.required_ruby_version = '~> 3.1'
-  #spec.add_dependency 'dependency_gem', '~> 2.1.0'
+  spec.required_ruby_version = '~> 4.0'
+  #spec.add_dependency 'dependency_gem', '~> 1.2.3'
   spec.add_development_dependency 'rake-compiler', '~> 1.2.0'
 end
