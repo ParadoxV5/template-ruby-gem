@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 require_relative 'lib/mygem/version'
 
 Gem::Specification.new do|spec|
@@ -27,6 +26,6 @@ Gem::Specification.new do|spec|
     Steepfile
   ]
   
-  spec.required_ruby_version = ['> 3.4', '< 4.1'] # Ruby 4.0 coming soon!
-  #spec.add_dependency 'dependency_gem', '~> 2.1.0'
+  spec.required_ruby_version = '~> 4.0'
+  #spec.add_dependency 'dependency_gem', '~> 1.2.3'
 end

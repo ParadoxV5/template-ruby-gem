@@ -10,10 +10,10 @@ Note: just `gem`. The `rake` is for invoking minitest (See [§Rakefile](#Rakefil
 * Rename all occurrences of `mygem`, lower- or title-case, with the name of your epic Gem.
   * [`lib/mygem/`](lib/mygem/)
   * [`lib/mygem.rb` and Line 1 & 2](lib/mygem.rb#L1-2)
-  * [`lib/mygem/version.rb` Line 3](lib/mygem/version.rb#L3)
+  * [`lib/mygem/version.rb` Line 1](lib/mygem/version.rb#L1)
   * [`sig/mygem.rbs` and Line 1](sig/mygem.rbs#L1)
-  * [`test/mygem_test.rb` and Lines 3 & 4](test/mygem_test.rb#L3-4)
-  * [`mygem.gemspec` and Lines 2, 5 & 7](mygem.gemspec#L2-L7)
+  * [`test/mygem_test.rb` and Lines 2 & 3](test/mygem_test.rb#L2-3)
+  * [`mygem.gemspec` and Lines 1, 4 & 6](mygem.gemspec#L1-L6)
 * Update the [`gemspec`](mygem.gemspec) with your Gem’s information. (See [§`*.gemspec`](#gemspec))
 * Overwrite this `README` with an introduction to your epic project.
 * Replace *this template’s* [`LICENSE.txt`](LICENSE.txt) with
@@ -37,7 +37,7 @@ This is the folder where people put their Gem sources, starting with their
 ### [`sig/**`](sig/)
 
 Have you heard of [RBS](https://github.com/ruby/rbs)?
-Yep, Ruby 3 introduced this official type checking system.
+Yep, Ruby 3 introduced this official type checking system. (And we are at Ruby 4 now!)
 The convention is to put your RBS signatures in this folder.
 
 
