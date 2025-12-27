@@ -1,6 +1,8 @@
-#source 'https://rubygems.org'
 source 'https://gem.coop'
-#source 'https://rubygems.pkg.github.com/AUTHOR'
+#source 'https://rubygems.pkg.github.com/AUTHOR' do
+#end
+#source 'https://rubygems.org' do
+#end
 gemspec
 
 # Development Apps
