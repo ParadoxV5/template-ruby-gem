@@ -27,7 +27,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        ruby-version: ['4']
+        ruby-version: [ruby-asan, '4']
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     steps:
