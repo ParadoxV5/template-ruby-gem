@@ -12,9 +12,7 @@ group :development do
     gem 'steep', '~> 1.10.0', require: false
   end
   group :documentation do
-    gem 'yard', require: false,
-      # For Commonmarker 1+ (lsegal/yard#1528)
-      github: 'gjtorikian/yard', branch: 'commonmarker-onetwo-oh'
+    gem 'yard', '~> 0.9.40', require: false
     gem 'commonmarker', '~> 2.6.1', require: false
   end
   group :test do
