@@ -13,7 +13,7 @@ group :development do
   end
   group :documentation do
     gem 'yard', '~> 0.9.40', require: false
-    gem 'commonmarker', '~> 2.6.1', require: false
+    gem 'commonmarker', '~> 2.10.0', require: false
   end
   group :test do
     gem 'rake', '~> 13.3.1'
